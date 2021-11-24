@@ -1,0 +1,66 @@
+* {
+    font-size: 10px;
+}
+
+p {
+    font-size: 11px;
+}
+
+/* id */
+#pId {
+    text-align: center;
+    color: darkblue;
+    font-size: 14px;
+}
+h2#pId{
+    text-align: center;
+    color: deeppink;
+    font-size: 14px;
+}
+
+/* class */
+.pClass{
+    color: darkorange;
+}
+.underline{
+    text-decoration: underline;
+}
+/* tag and class */
+p.pClass {
+    color: darkseagreen;
+}
+
+/* group */
+h3, h4 {
+    text-align: center;
+    color: gold;
+}
+
+div{
+    background-color: grey;
+}
+
+div p {
+    font-size: 8px;
+}
+
+/* pseudo-class */
+a:hover {
+    color: indianred;
+}
+
+/* attribute selector */
+input[type="text"]{
+    border: red 1px solid;
+}
+
+input[required]{
+    color: mediumvioletred;
+}
+
+/* pseudo-element */
+#pe::first-letter
+{
+    background-color: white;
+}
+

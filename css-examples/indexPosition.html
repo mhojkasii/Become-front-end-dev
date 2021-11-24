@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+    <style>
+        .fixed {
+            position:fixed;
+            bottom: 20px;
+            left: 100px;
+            background-color: brown;
+        }
+        .absolute {
+            position: absolute;
+            top: 5px;
+        }
+        .sticky{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky">
+        Sticky
+    </div>
+    <h1 style="height: 1000px;">
+        Postion example
+    </h1>
+    
+    <div class="fixed">
+        <p>Fixed element</p>
+        <div class="absolute">
+            Absolute element
+        </div>
+    </div>
+</body>
+</html>

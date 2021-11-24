@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>DOM title</title>
+</head>
+<body>
+    <h1>DOM</h1>
+    <p id="text" lang="EN" style="color: red;" >
+        Test paragraph</p>
+    <div id='placeForButton'>
+        <!-- Button -->
+    </div>
+    <script>
+        var button = document.createElement("input");
+        
+        button.value = "Button";
+        button.type = "button";
+        button.id = "button1";
+        button.style.height = "100px";
+        button.style.backgroundColor = "blue";
+
+        var divPlaceForButton = document.getElementById("placeForButton");
+        divPlaceForButton.append(button);
+
+        var btn = document.getElementById("button1");
+        btn.style.backgroundColor = "green";
+
+    </script>
+</body>
+</html>
