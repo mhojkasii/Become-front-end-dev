@@ -1,0 +1,11 @@
+#result{
+    
+    font-size: 30pt;
+    padding:20px
+  }
+  .success{
+    background-color: greenyellow;
+  }
+  .warning{
+    background-color: red;
+  }
