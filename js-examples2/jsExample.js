@@ -1,72 +1,35 @@
-var t = 2; 
-var r = 5;
-var x = "sample string";
 
-var car = { name: "Skoda", age: 10}
-
-setCarAge(car, 3);
-console.log(car);
-
-function setCarAge(car, age){
-    car.age = age;
+for (var x = 1; x < 10; x++){
+    console.log(x);
 }
 
-// var welcomeMessage = getWelcomeMessage(false);
-// console.log(welcomeMessage);
+// var x = 1;
+// for (; x < 10; x++){
+//     console.log(x);
+// }
 
-function getWelcomeMessage(boolValue){
-    console.log("function called");
-    if(boolValue)
-    {
-        // true
-        var v = 5;
-        
-        return "Welcome";
-    }
-    
-    // false
-    return "Welcome to training.";
-}
+// console.log(x);
 
-// var welcomeMessage = getWelcomeMessageManyReturns();
-// console.log(welcomeMessage);
+// var x = 1;
+// for ( ; x < 10 ;){
+//     console.log(x);
+//     x++;
+// }
 
-function getWelcomeMessageManyReturns(){ 
-    console.log("function called");
-    return "Welcome";
-    return "Welcome to training.";
-    var t = 6;
-}
+// console.log(x);
 
-// var welcomeMessage = getWelcomeMessageFromParameterLessFunction();
-// console.log(welcomeMessage);
-function getWelcomeMessageFromParameterLessFunction(){ 
-    console.log("function called");
-    return "Welcome";
-}
+// var x = 1;
+// for (;;) {
+//     if (x < 10) {
+//         console.log(x);
+//         x++;
+//     }
+//     else {
+//         break;
+//     }
+// }
 
-function getWelcomeMessageFromParameterLessFunction(){ 
-    console.log("function called");
-    
-    return "Welcome to training.";
-}
-
-// addValueAndPrintToConsole(t, r);
-// addValueAndPrintToConsole(r, t);
-// addValueAndPrintToConsole(4, 6);
-function addValueAndPrintToConsole(numericVariable, secondNumericVariable) 
-{
-    var result = numericVariable + secondNumericVariable;
-
-    console.log("After operation value is: " + result);
-}
-
-// printToConsole(t);
-// printToConsole(r);
-// printToConsole(x);
-// printToConsole("additional string");
-function printToConsole(variable) 
-{
-    console.log("Value is: " + variable);
-}
-// const fun = (v) => console.log("Value is: " + v);
+// for (var x = 1, y = 100; x < 10 && true; x++, y--){
+//     console.log(x);
+//     console.log(y);
+// }
