@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+</head>
+
+<body>
+    <h1 id="header" onmouseover="">Increase value</h1>
+    <p1 id='post'></p1>
+    <input name='id' id="postId" value="1" />
+    <button onclick="fetchData()">Get post</button>
+    <script>
+        function fetchData() {
+            const xhttp = new XMLHttpRequest();
+            const id = document.getElementById("postId").value;
+            xhttp.open("GET", 'https://jsonplaceholder.typicode.com/posts/'+ id);
+            xhttp.responseType = 'json';
+            xhttp.send();
+            xhttp.onload = function () {
+                const post = xhttp.response;
+                document.getElementById('post').innerHTML = post.title;
+                // const posts = xhttp.response;
+                // posts.forEach(function(p){
+                    
+                //     if(p.id == id){
+                //         document.getElementById('post').innerHTML = p.title;
+                //     }
+                //     // console.log(p);
+                // });
+
+            }
+        }
+    </script>
+</body>
+</html>
