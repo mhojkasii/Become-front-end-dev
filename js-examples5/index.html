@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+</head>
+
+<body>
+    <h1 id="header" onmouseover="">Get post</h1>
+    <p id='post'></p>
+    <input name='id' id="postId" value="1" />
+    <button onclick="fetchData2()">Get post</button>
+    <button onclick="fetchAllPosts()">Get ALL posts</button>
+    <ul id="list">
+
+    </ul>
+    <script>
+        function User(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+        const users = [new User(1, "Tomasz"), new User(2, "Marcin"), new User(3, "Jan"), new User(4, "Mateusz")];
+
+        function fetchData2() {
+            const id = document.getElementById("postId").value;
+
+            fetch("https://jsonplaceholder.typicode.com/posts/" + id)
+                .then(response => {
+                    return response.json();
+                })
+                .then(post => {
+                    document.getElementById('post').innerHTML = post.title;
+                    console.log(post);
+                })
+        }
+
+        function fetchAllPosts() {
+
+            let ul = document.getElementById('list');
+            const id = document.getElementById('listId');
+            fetch('https://jsonplaceholder.typicode.com/posts/')
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(posts) {
+
+                    posts.forEach(function (post) {
+                        let li = document.createElement('li');
+
+                        const user = users.find(function(user){
+                            if(user.id == post.userId){
+                                return true;
+                            }
+                        });
+
+                        li.innerHTML = 'Id: '+ post.id + ', User: '+ (user !== undefined ? user.name : "") + ', Title: ' + post.title;
+                        ul.appendChild(li);
+                    })
+                })
+            }
+    </script>
+</body>
+
+</html>
